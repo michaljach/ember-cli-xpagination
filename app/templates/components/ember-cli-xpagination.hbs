@@ -1,0 +1,21 @@
+{{yield}}
+
+{{#if pages}}
+    <ul class="pagination pagination-md">
+        <li>
+            <a {{action 'changePage' 'prev' params}}><i class="fa fa-angle-left"></i></a>
+        </li>
+        {{#each pages as |page|}}
+            <li {{action 'changePage' page.id}}>
+                {{#if page.current}}
+                    {{#link-to (query-params page=page.id) class='active'}}{{page.id}}{{/link-to}}
+                {{else}}
+                    {{#link-to (query-params page=page.id)}}{{page.id}}{{/link-to}}
+                {{/if}}
+            </li>
+        {{/each}}
+        <li>
+            <a {{action 'changePage' 'next' params}}><i class="fa fa-angle-right"></i></a>
+        </li>
+    </ul>
+{{/if}}
