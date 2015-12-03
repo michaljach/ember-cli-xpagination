@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-xpagination",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ember CLI easy to use pagination addon",
   "directories": {
     "doc": "doc",
